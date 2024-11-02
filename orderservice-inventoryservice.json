@@ -1,0 +1,33 @@
+{
+  "consumer": {
+    "name": "OrderService"
+  },
+  "provider": {
+    "name": "InventoryService"
+  },
+  "interactions": [
+    {
+      "description": "a request for product availability",
+      "providerState": "Product A001 exists and is in stock",
+      "request": {
+        "method": "GET",
+        "path": "/inventory/A001"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": "A001",
+          "name": "Laptop",
+          "availability_status": "InStock"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
